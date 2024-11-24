@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* line-height: 1.6; */
+    color: #333;
+    background-color: #f0f4f8;
+    margin-top: 8rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #1a365d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.link-custom {
+    color: #3071ff;  /* Warna teks */
+    text-decoration: none;  /* Menghilangkan garis bawah default pada link */
+    font-weight: bold;  /* Membuat teks tebal */
+  }
+  
+  /* Efek saat link dihover */
+  .link-custom:hover {
+    color: #ec3110;  /* Ubah warna saat mouse hover */
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+/*End of Navigation*/
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.icon-logo {
+    width: 50px;
+    height: 60px;
+    background: #3071ff;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.icon-info {
+    flex: 1;
+}
+
+.separator {
+    height: 1px;
+    background: #ddd;
+    margin:15px 0;
+}
+
+.form-section {
+    flex: 2;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item-option {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.item-option.selected {
+    border-color: #3071ff;
+    color: #3071ff;
+    font-weight: bold;
+    background-color: #f0f7ff;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #3071ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #3071ff;
+}
+
+#total-price {
+    font-weight: bold;
+    color: #0095ff;
+}
