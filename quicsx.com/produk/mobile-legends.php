@@ -15,12 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../page/login.php"); // Jika belum login, arahkan ke halaman login
         exit;
     } else{
-    $phone = $_POST['phone'];
+    $uid = $_POST['uid'];
+    $sid = $_POST['sid'];
     $item =  $_POST['item'];
-    $item = "OVO ". $item;
+    $item = "MLBB ". $item;
     $price = $_POST['item_price'] + 1000; // Tambahkan biaya administrasi 1000 rupiah
     $payment_method = $_POST['payment_method']; // Ambil metode pembayaran
-    $info = "Nomor Telepon: $phone";
+    $info = "User ID: $uid | Server ID: $sid";
 
     // Query untuk memasukkan data ke dalam tabel pesanan
     $sql = "INSERT INTO pesanan (user_id, item, harga, informasi, pembayaran, tanggal_pesanan) 
@@ -31,14 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Eksekusi query
     if ($stmt->execute()) {
         // Encode variabel untuk URL yang lebih aman
-        $phone_encoded = urlencode($phone);
+        $uid_encoded = urlencode($uid);
+        $sid_encoded = urlencode($sid);
         $item_encoded = urlencode($item);
         $price_encoded = number_format($price, 0, ',', '.');
         $payment_method_encoded = urlencode($payment_method);
 
         // Membuat pesan untuk WhatsApp
         $message = "Halo, saya ingin melakukan top up dengan informasi berikut:\n\n" . 
-            "- No. Telepon: $phone_encoded\n" . 
+            "- User ID: $uid_encoded\n" . 
+            "- Server ID: $sid_encoded\n" . 
             "- Item: $item_encoded\n" . 
             "- Total: Rp $price_encoded\n" . 
             "- Metode Pembayaran: $payment_method_encoded\n\n" . 
@@ -51,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $whatsapp_url = "https://wa.me/6285745735072?text=$encoded_message";
         
         // Mengarahkan ke WhatsApp menggunakan JavaScript
-         echo "<script>window.location.href = '$whatsapp_url';</script>";
+        echo "<script>window.location.href = '$whatsapp_url';</script>";
     } else {
         echo "<script>alert('Error: " . $stmt->error . "');</script>";
     }
@@ -64,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVO Top Up</title>
+    <title>Top Up Diamond MLBB</title>
     <link rel="stylesheet" href="../css/e-wallet.css">
     <link rel="stylesheet" href="../layout/footer.css">
     <link rel="icon" href="../resources/logo.png">
@@ -75,12 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Bagian kiri -->
         <div class="icon-info card">
             <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="../images/ovo.jpg" alt="ovo" class="icon-logo">
-                <h2>OVO</h2>
+                <img src="../images/ml.jpg" alt="MLBB" class="icon-logo">
+                <h2>Diamond MLBB</h2>
             </div>
             <div class="separator"></div>
-            <p>Top Up Saldo Hanya Dalam Hitungan Detik<br>
-                1. Cukup Masukan Nomor Telepon Anda.<br>
+            <p>Top Up Diamond MLBB Hanya Dalam Hitungan Detik<br>
+                1. Cukup Masukan User ID & Server Anda.<br>
                 2. Pilih Nominal Yang Anda inginkan.<br>
                 3. Pilih Pembayaran Yang Anda Gunakan Dan Selesaikan Pembayaran.<br>
                 4. Dan Saldo Akan Secara Langsung Ditambahkan Ke Dompet Digital Anda.</p>
@@ -90,20 +93,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form id="topup-form" method="POST" class="form-section">
             <!-- Input nomor telepon -->
             <div class="card">
-                <h3> Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="Masukkan No. Telepon" required>
+                <h3>📱 Masukkan User ID</h3>
+                <div class="input-form">
+                <input type="text"  name="uid" placeholder="User ID" required>
+                <input type="text"  name="sid" placeholder="Server ID" required>
+                </div>
             </div>
 
             <!-- Pilihan item -->
             <div class="card">
-                <h3> Pilih Item</h3>
+                <h3>💎 Pilih Item</h3>
                 <div class="item-grid">
                     <?php
                     // Pilihan item
                     $items = [
-                        ['value' => '5rb', 'price' => 5000],
-                        ['value' => '10rb', 'price' => 10000],
-                        ['value' => '20rb', 'price' => 20000],
+                        ['value' => '59 DM', 'price' => 5000],
+                        ['value' => '199 DM', 'price' => 10000],
+                        ['value' => '299 DM', 'price' => 20000],
+                        ['value' => '479 DM', 'price' => 30000],
+                        ['value' => '500 DM', 'price' => 50000],
+                        ['value' => '1000 DM', 'price' => 100000],
                     ];
 
                     // Loop untuk menampilkan item

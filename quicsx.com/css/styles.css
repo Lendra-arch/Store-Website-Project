@@ -217,7 +217,7 @@ nav .container {
     animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
+/* @keyframes float {
     0%{
         transform: translateY(0px);
     }
@@ -227,7 +227,7 @@ nav .container {
     100%{
         transform: translateY(0px);
     }
-}
+} */
 
 .hero-image img {
     max-width: 100%;
@@ -259,7 +259,7 @@ nav .container {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
-    cursor: pointer;
+    cursor: default;
 }
 .service-card:hover {
     transform: translateY(-5px);

@@ -132,6 +132,12 @@ input[type="text"], select {
     margin-bottom: 10px;
 }
 
+.input-form {
+    width: 100%;
+    display: inline-flex;
+    gap: 10px;
+}
+
 button {
     background: #3071ff;
     color: white;

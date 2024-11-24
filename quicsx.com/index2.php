@@ -30,7 +30,7 @@
         <div class="container">
             <h2><span style="color: #1456b3;">Layanan</span> Yang<br>Kami Sediakan!</h2>
             <div class="services-grid">
-                <a href="#" class="service-card">
+                <a href="#.html" class="service-card">
                     <div class="service-icon">💳</div>
                     <h3>Top Up E-Wallet</h3>
                 </a>
@@ -55,7 +55,6 @@
                     <h3>Jasa Edit/Buat Dokumen</h3>
                 </a>
             </div>
-            <a href="http://localhost/quicsx.com/page/produk.php" class="btn" style="float: right;">Pergi ke Produk >></a>
         </div>
     </section>
 

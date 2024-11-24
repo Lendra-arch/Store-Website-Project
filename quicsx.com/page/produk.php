@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 </head>
 <body>
     <?php include "../layout/navbar.php" ?>
+    <img src="../images/banner.jpg" alt="Banner" style="justify-self: center; object-fit:cover; width:60%; max-width: 1000px; max-height:200px; display: block; border-radius: 20px;">
     <section>
         <h2>E-Wallet</h2>
         <div class="menu-container">

@@ -1,6 +1,8 @@
 <?php
     include "../service/database.php";
- session_start();
+    session_start();
+    $pesan = isset($_SESSION['pesan']) ? $_SESSION['pesan'] : '';
+    unset($_SESSION['pesan']);
 
     $login_msg = "";
 
@@ -48,6 +50,7 @@
         <div class="box form-box">
     <header>Login</header>
     <i style="margin-bottom:10px"><?= $login_msg ?></i>
+    <i style="margin-bottom:10px"><?= $pesan ?></i>
     <form action="login.php" method="POST">
         <div class="field input">
         <input type="text" placeholder="username" name="username"/>

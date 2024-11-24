@@ -2,17 +2,19 @@
 session_start();
 include "../service/database.php";
 
-// Cek apakah user sudah login
-if (!isset($_SESSION['user_id'])) {
-    header("Location: ../page/login.php"); // Jika belum login, arahkan ke halaman login
-    exit;
+// Jika Uswr sudah login, ambil user id nya
+if (isset($_SESSION['user_id'])) {
+    // Ambil user_id dari session
+    $user_id = $_SESSION['user_id'];
 }
-
-// Ambil user_id dari session
-$user_id = $_SESSION['user_id'];
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_SESSION['user_id'])) {
+        $_SESSION['pesan'] = 'login dulu sebelum melanjutkan';
+        header("Location: ../page/login.php"); // Jika belum login, arahkan ke halaman login
+        exit;
+    } else{
     $phone = $_POST['phone'];
     $item =  $_POST['item'];
     $item = "DANA ". $item;
@@ -53,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<script>alert('Error: " . $stmt->error . "');</script>";
     }
+}
 }
 ?>
 

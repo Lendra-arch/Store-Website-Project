@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else{
     $phone = $_POST['phone'];
     $item =  $_POST['item'];
-    $item = "OVO ". $item;
+    $item = "GoPay ". $item;
     $price = $_POST['item_price'] + 1000; // Tambahkan biaya administrasi 1000 rupiah
     $payment_method = $_POST['payment_method']; // Ambil metode pembayaran
     $info = "Nomor Telepon: $phone";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $whatsapp_url = "https://wa.me/6285745735072?text=$encoded_message";
         
         // Mengarahkan ke WhatsApp menggunakan JavaScript
-         echo "<script>window.location.href = '$whatsapp_url';</script>";
+        echo "<script>window.location.href = '$whatsapp_url';</script>";
     } else {
         echo "<script>alert('Error: " . $stmt->error . "');</script>";
     }
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OVO Top Up</title>
+    <title>Gopay Top Up</title>
     <link rel="stylesheet" href="../css/e-wallet.css">
     <link rel="stylesheet" href="../layout/footer.css">
     <link rel="icon" href="../resources/logo.png">
@@ -75,8 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Bagian kiri -->
         <div class="icon-info card">
             <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="../images/ovo.jpg" alt="ovo" class="icon-logo">
-                <h2>OVO</h2>
+                <img src="../images/gopay.jpg" alt="gopay" class="icon-logo">
+                <h2>Gopay</h2>
             </div>
             <div class="separator"></div>
             <p>Top Up Saldo Hanya Dalam Hitungan Detik<br>
@@ -90,13 +90,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form id="topup-form" method="POST" class="form-section">
             <!-- Input nomor telepon -->
             <div class="card">
-                <h3> Masukkan No. Telepon</h3>
+                <h3>📱 Masukkan No. Telepon</h3>
                 <input type="text" name="phone" placeholder="Masukkan No. Telepon" required>
             </div>
 
             <!-- Pilihan item -->
             <div class="card">
-                <h3> Pilih Item</h3>
+                <h3>💎 Pilih Item</h3>
                 <div class="item-grid">
                     <?php
                     // Pilihan item
@@ -104,6 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         ['value' => '5rb', 'price' => 5000],
                         ['value' => '10rb', 'price' => 10000],
                         ['value' => '20rb', 'price' => 20000],
+                        ['value' => '30rb', 'price' => 30000],
+                        ['value' => '50rb', 'price' => 50000],
+                        ['value' => '100rb', 'price' => 100000],
                     ];
 
                     // Loop untuk menampilkan item
