@@ -129,8 +129,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h3>💳 Pilih Metode Pembayaran</h3>
                 <select name="payment_method" required>
                     <option value="QRIS">QRIS</option>
-                    <option value="Bank Transfer">Bank Transfer</option>
-                    <option value="Kartu Kredit">Kartu Kredit</option>
+                    <option value="All E-Wallet">All E-Wallet</option>
+                    <option value=""></option>
                 </select>
                 <p>Total Harga: <span id="total-price">Rp 0</span></p>
             </div>

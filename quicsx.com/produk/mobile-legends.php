@@ -79,14 +79,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="icon-info card">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <img src="../images/ml.jpg" alt="MLBB" class="icon-logo">
-                <h2>Diamond MLBB</h2>
+                <h2>Mobile Legends</h2>
             </div>
             <div class="separator"></div>
             <p>Top Up Diamond MLBB Hanya Dalam Hitungan Detik<br>
                 1. Cukup Masukan User ID & Server Anda.<br>
                 2. Pilih Nominal Yang Anda inginkan.<br>
                 3. Pilih Pembayaran Yang Anda Gunakan Dan Selesaikan Pembayaran.<br>
-                4. Dan Saldo Akan Secara Langsung Ditambahkan Ke Dompet Digital Anda.</p>
+                4. Dan Item Akan Secara Langsung Ditambahkan Ke Akun Anda.</p>
         </div>
 
         <!-- Form -->
@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Pilihan item -->
             <div class="card">
-                <h3>💎 Pilih Item</h3>
+                <h3>💎 Pilih Nominal Top Up</h3>
                 <div class="item-grid">
                     <?php
                     // Pilihan item
@@ -135,8 +135,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h3>💳 Pilih Metode Pembayaran</h3>
                 <select name="payment_method" required>
                     <option value="QRIS">QRIS</option>
-                    <option value="Bank Transfer">Bank Transfer</option>
-                    <option value="Kartu Kredit">Kartu Kredit</option>
+                    <option value="All E-Wallet">All E-Wallet</option>
+                    <option value="BCA">BCA</option>
                 </select>
                 <p>Total Harga: <span id="total-price">Rp 0</span></p>
             </div>

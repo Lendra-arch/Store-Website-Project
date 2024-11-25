@@ -39,10 +39,6 @@
                     <h3>Top Up Games</h3>
                 </a>
                 <a href="#" class="service-card">
-                    <div class="service-icon">📃</div>
-                    <h3>Bayar Tagihan</h3>
-                </a>
-                <a href="#" class="service-card">
                     <div class="service-icon">🎥</div>
                     <h3>Jasa Edit Video</h3>
                 </a>
