@@ -2,7 +2,7 @@
  .footer {
     background-color: #1a365d;
     color: #ffffff;
-    padding: 3rem 0 1rem;
+    padding: 2rem 0 1rem;
 }
 .footer-content {
     max-width: 1200px;
@@ -13,6 +13,7 @@
     gap: 2rem;
     padding: 0 1rem;
 }
+
 .footer-section {
     flex: 1;
     min-width: 200px;

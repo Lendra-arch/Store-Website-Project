@@ -13,58 +13,6 @@ body {
     margin-top: 8rem;
 }
 
-/* Navigation */
-nav {
-    background-color: #1a365d;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-.link-custom {
-    color: #3071ff;  /* Warna teks */
-    text-decoration: none;  /* Menghilangkan garis bawah default pada link */
-    font-weight: bold;  /* Membuat teks tebal */
-  }
-  
-  /* Efek saat link dihover */
-  .link-custom:hover {
-    color: #ec3110;  /* Ubah warna saat mouse hover */
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1.5rem;
-}
-.nav-links a:hover {
-    text-decoration: underline;
-}
-/*End of Navigation*/
-
-
 .container {
     display: flex;
     gap: 20px;

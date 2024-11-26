@@ -15,8 +15,9 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <img src="/quicsx.com/resources/logo.png" width="40px">
-                <h3>Tentang QuicsX</h3>
+                <div class="about">
+                <h3 style="align-self: center; margin-top:1rem;">Tentang QuicsX</h3>
+                </div>
                 <p>QuicsX adalah usaha yang bergerak di bidang digital. Sat set siap melayani anda.</p>
             </div>
             <div class="footer-section">

@@ -20,31 +20,24 @@ body {
 }
 .dashboard-card {
     width: 300px;
-    height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.dashboard-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 .card-pesanan { background-color: #007bff; }
 .card-pembayaran { background-color: #28a745; }
 .card-user { background-color: #dc3545; }
 .card-title {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin: 10px 10px 5px 10px;
 }
 .card-value {
     font-size: 24px;
+    margin: 10px 10px 5px 10px;
     font-weight: bold;
 }
 /*Test*/
@@ -55,6 +48,24 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.atas{
+    align-items: center;
+}
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 50px;
+    align-items: center;
+}
+.search-form input {
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+}
+
 
 h2, h3 {
     color: #333;
@@ -73,12 +84,13 @@ input[type="text"], input[type="password"], input[type="number"] {
 }
 
 button {
-    background-color: #4971bb;
+    background-color: #007bff;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    height: 35px;
 }
 
 button:hover {
@@ -115,16 +127,4 @@ th, td {
 }
 .pagination a:hover {
     text-decoration: underline;
-}
-.search-form {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    height: 50px;
-}
-.search-form input {
-    padding: 5px;
-    width: 200px;
-    height: 30px;
 }

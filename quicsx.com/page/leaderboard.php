@@ -28,6 +28,7 @@ $result = $conn->query($sql);
     <title>Leaderboard</title>
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../layout/footer.css">
+    <link rel="stylesheet" href="../layout/navbar.css">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
