@@ -37,6 +37,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Akun</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="/quicsx.com/resources/logo.png">
+    <link rel="stylesheet" href="../layout/navbar.css">
     <link rel="stylesheet" href="../layout/footer.css">
     <link rel="icon" href="../resources/logo.png">
 </head>

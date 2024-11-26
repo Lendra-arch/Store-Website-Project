@@ -78,6 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['delete'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../layout/footer.css">
+    <link rel="icon" href="/quicsx.com/resources/logo.png">
     <title>Dashboard</title>
 </head>
 <body>

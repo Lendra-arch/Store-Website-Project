@@ -6,7 +6,8 @@
     <title>QuicsX - Buat Hidupmu Jadi Lebih Mudah!</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="layout/footer.css">
-    <link rel="icon" href="resources/logo.png">
+    <link rel="stylesheet" href="layout/navbar.css">
+    <link rel="icon" href="/quicsx.com/resources/logo.png">
 </head>
 <body>
 <?php include "layout/navbar.php"; ?>
@@ -30,28 +31,28 @@
         <div class="container">
             <h2><span style="color: #1456b3;">Layanan</span> Yang<br>Kami Sediakan!</h2>
             <div class="services-grid">
-                <a href="#" class="service-card">
-                    <div class="service-icon">💳</div>
-                    <h3>Top Up E-Wallet</h3>
+                <a class="service-card">
+                    <div class="service-icon">💵</div>
+                    <h3>Convert Mata Uang</h3>
                 </a>
-                <a href="#" class="service-card">
-                    <div class="service-icon">🎮</div>
-                    <h3>Top Up Games</h3>
+                <a href="/quicsx.com/page/produk.php"class="service-card">
+                    <div class="service-icon">💳🎮</div>
+                    <h3>Top Up E-Wallet & Games</h3>
                 </a>
-                <a href="#" class="service-card">
+                <a class="service-card">
                     <div class="service-icon">🎥</div>
                     <h3>Jasa Edit Video</h3>
                 </a>
-                <a href="#" class="service-card">
+                <a class="service-card">
                     <div class="service-icon">📷</div>
                     <h3>Jasa Edit Foto</h3>
                 </a>
-                <a href="#" class="service-card">
+                <a class="service-card">
                     <div class="service-icon">📄</div>
                     <h3>Jasa Edit/Buat Dokumen</h3>
                 </a>
             </div>
-            <a href="http://localhost/quicsx.com/page/produk.php" class="btn" style="float: right;">Pergi ke Produk >></a>
+            <a href="/quicsx.com/page/layanan.php" class="btn" style="float: right;">Pergi ke Layanan >></a>
         </div>
     </section>
 

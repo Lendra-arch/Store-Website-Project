@@ -6,6 +6,8 @@
     <title>About QuicsX - Digital Services</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../layout/navbar.css">
+    <link rel="icon" href="/quicsx.com/resources/logo.png">
     <link rel="stylesheet" href="../layout/footer.css">
 </head>
 <body>

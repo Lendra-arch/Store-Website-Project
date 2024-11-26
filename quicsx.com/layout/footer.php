@@ -6,6 +6,7 @@
     <title>Improved Footer Layout</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="/quicsx.com/resources/logo.png">
 </head>
 <body>
     <main>
@@ -14,23 +15,26 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <img src="http://localhost/quicsx.com/resources/logo.png" width="40px">
+                <img src="/quicsx.com/resources/logo.png" width="40px">
                 <h3>Tentang QuicsX</h3>
                 <p>QuicsX adalah usaha yang bergerak di bidang digital. Sat set siap melayani anda.</p>
             </div>
             <div class="footer-section">
                 <h3>Menu Cepat</h3>
                 <ul>
-                    <li><a href="http://localhost/quicsx.com/index.php">Home</a></li>
-                    <li><a href="http://localhost/quicsx.com/page/About.php">Tentang Kami</a></li>
+                    <li><a href="/quicsx.com/index.php">Home</a></li>
+                    <li><a href="/quicsx.com/page/About.php">Tentang Kami</a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=6285745735072&text=Halo min, mau tanya lebih lanjut dong
                     ">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Hubungi Kami</h3>
-                <p>Email: quicsx@outlook.com</p>
-                <p>Phone: +62 857 4573 5072</p>
+                <ul>
+                <li><a>Email: quicsx@outlook.com</a></li>
+                <li><a href="wa.me/+6285745735072">Whatsapp: +62 857 4573 5072</a></li>
+                <li><a href="https://t.me/QuicsX">Telegram Kami : @QuicsX</a></li>
+                </ul>
                 <!-- <div class="social-icons">
                     <a href="#" class="social-icon" aria-label="Facebook">&#xf09a;</a>
                     <a href="#" class="social-icon" aria-label="Twitter">&#xf099;</a>

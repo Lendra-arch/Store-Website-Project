@@ -3,19 +3,19 @@ include "../service/database.php"; // Koneksi ke database
 
 // Query untuk mendapatkan leaderboard
 $sql = "SELECT 
-            users.username,
-            SUM(pesanan.harga) AS total_transaksi
-        FROM 
-            users u
-        JOIN 
-            pesanan p
-        ON 
-            u.user_id = p.user_id
-        GROUP BY 
-            u.user_id
-        ORDER BY 
-            total_transaksi DESC
-        LIMIT 10"; // Batasi 10 besar
+    u.username,
+    SUM(p.harga) AS total_transaksi
+FROM 
+    users u
+JOIN 
+    pesanan p
+ON 
+    u.id = p.user_id
+GROUP BY 
+    u.id
+ORDER BY 
+    total_transaksi DESC
+LIMIT 10;"; // Batasi 10 besar
 $result = $conn->query($sql);
 
 ?>
@@ -27,9 +27,12 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../layout/footer.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-    <div class="container">
+    <?php include "../layout/navbar.php" ?>
+    <div class="kotak">
         <h1>🏆 Leaderboard</h1>
         <table>
             <thead>
@@ -57,5 +60,8 @@ $result = $conn->query($sql);
             </tbody>
         </table>
     </div>
+
+    <?php include "../layout/footer.php" ?>
+
 </body>
 </html>

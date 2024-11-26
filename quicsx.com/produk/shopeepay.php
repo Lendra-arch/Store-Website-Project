@@ -67,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Spay Top Up</title>
     <link rel="stylesheet" href="../css/e-wallet.css">
     <link rel="stylesheet" href="../layout/footer.css">
+    <link rel="stylesheet" href="layout/navbar.css">
     <link rel="icon" href="../resources/logo.png">
 </head>
 <body>

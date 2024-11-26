@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dana Top Up</title>
     <link rel="stylesheet" href="../css/e-wallet.css">
+    <link rel="stylesheet" href="layout/navbar.css">
     <link rel="stylesheet" href="../layout/footer.css">
     <link rel="icon" href="../resources/logo.png">
 </head>

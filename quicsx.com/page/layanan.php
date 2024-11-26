@@ -99,6 +99,36 @@ $images = [
             </div>
         </div>
     </section>
+
+    <section>
+        <h2>Layanan Digital</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <a href="../produk/edit-foto.php">
+                    <img src="../images/edit-foto.jpg" alt="Edit Foto">
+                    <div class="menu-title">Edit Foto</div>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../produk/edit-video.php">
+                    <img src="../images/edit-video.jpg" alt="Edit Video">
+                    <div class="menu-title">Edit Video</div>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../produk/edit-dokumen.php">
+                    <img src="../images/edit-dokumen.jpg" alt="Edit Dokumen">
+                    <div class="menu-title">Dokumen</div>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../produk/edit-dokumen.php">
+                    <img src="../images/convert.jpg" alt="Convert Mata Uang">
+                    <div class="menu-title">Convert Mata Uang</div>
+                </a>
+            </div>
+        </div>
+    </section>
     <?php include "../layout/footer.php" ?>
     <script>
         // Daftar gambar dari PHP
