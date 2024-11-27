@@ -17,12 +17,12 @@
                 <!-- Navbar 2: User sudah login -->
             <?php if ($_SESSION["role"] === 'admin'): ?>
                 <!-- Navbar 3: Admin yang login -->
-                    <a href="/quicsx.com/page/produk.php" >Produk</a>
+                    <a href="/quicsx.com/page/layanan.php" >Produk</a>
                     <a href="/quicsx.com/page/dashboard.php" >Dashboard</a>
                     <a href="#">Halo,  <?php echo htmlspecialchars($_SESSION['username']); ?></a>
                     <a href="/quicsx.com/page/logout.php" class="link-custom">Logout</a>
                 <?php else: ?>
-                    <a href="/quicsx.com/page/produk.php" >Produk</a>
+                    <a href="/quicsx.com/page/layanan.php" >Produk</a>
                     <a href="#">Halo,  <?php echo htmlspecialchars($_SESSION['username']); ?></a>
                     <a href="/quicsx.com/page/logout.php" class="link-custom">Logout</a>
             <?php endif; ?>

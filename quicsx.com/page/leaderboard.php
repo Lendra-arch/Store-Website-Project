@@ -11,6 +11,8 @@ JOIN
     pesanan p
 ON 
     u.id = p.user_id
+WHERE 
+    p.status = 'berhasil'
 GROUP BY 
     u.id
 ORDER BY 
