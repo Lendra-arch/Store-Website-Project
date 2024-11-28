@@ -224,6 +224,7 @@ th, td {
 
 .action-link:hover {
     background-color: #218838;
+    text-decoration: none;
 }
 
 .table {

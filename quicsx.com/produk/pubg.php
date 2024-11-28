@@ -15,12 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../page/login.php"); // Jika belum login, arahkan ke halaman login
         exit;
     } else{
-    $phone = $_POST['phone'];
+    $uid = $_POST['uid'];
+    $sid = $_POST['sid'];
     $item =  $_POST['item'];
-    $item = "DANA ". $item;
+    $item = "MLBB ". $item;
     $price = $_POST['item_price'] + 1000; // Tambahkan biaya administrasi 1000 rupiah
     $payment_method = $_POST['payment_method']; // Ambil metode pembayaran
-    $info = "Nomor Telepon: $phone";
+    $info = "User ID: $uid | Server ID: $sid";
 
     // Query untuk memasukkan data ke dalam tabel pesanan
     $sql = "INSERT INTO pesanan (user_id, item, harga, informasi, pembayaran, tanggal_pesanan) 
@@ -31,14 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Eksekusi query
     if ($stmt->execute()) {
         // Encode variabel untuk URL yang lebih aman
-        $phone_encoded = urlencode($phone);
+        $uid_encoded = urlencode($uid);
+        $sid_encoded = urlencode($sid);
         $item_encoded = urlencode($item);
         $price_encoded = number_format($price, 0, ',', '.');
         $payment_method_encoded = urlencode($payment_method);
 
         // Membuat pesan untuk WhatsApp
         $message = "Halo, saya ingin melakukan top up dengan informasi berikut:\n\n" . 
-            "- No. Telepon: $phone_encoded\n" . 
+            "- User ID: $uid_encoded\n" . 
+            "- Server ID: $sid_encoded\n" . 
             "- Item: $item_encoded\n" . 
             "- Total: Rp $price_encoded\n" . 
             "- Metode Pembayaran: $payment_method_encoded\n\n" . 
@@ -64,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dana Top Up</title>
+    <title>Top Up UC PUBGM</title>
     <link rel="stylesheet" href="../css/e-wallet.css">
     <link rel="stylesheet" href="../layout/navbar.css">
     <link rel="stylesheet" href="../layout/footer.css">
@@ -76,39 +79,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Bagian kiri -->
         <div class="icon-info card">
             <div style="display: flex; align-items: center; gap: 10px;">
-                <img src="../images/dana.jpg" alt="Dana" class="icon-logo">
-                <h2>Dana</h2>
+                <img src="../images/pubg.jpg" alt="MLBB" class="icon-logo">
+                <h2>Pubg Mobile</h2>
             </div>
             <div class="separator"></div>
-            <p>Top Up Saldo Hanya Dalam Hitungan Detik<br>
-                1. Cukup Masukan Nomor Telepon Anda.<br>
+            <p>Top Up Uc Pubg Mobile Hanya Dalam Hitungan Detik<br>
+                1. Cukup Masukan User ID & Server Anda.<br>
                 2. Pilih Nominal Yang Anda inginkan.<br>
                 3. Pilih Pembayaran Yang Anda Gunakan Dan Selesaikan Pembayaran.<br>
-                4. Dan Saldo Akan Secara Langsung Ditambahkan Ke Dompet Digital Anda.</p>
+                4. Dan Item Akan Secara Langsung Ditambahkan Ke Akun Anda.</p>
         </div>
 
         <!-- Form -->
         <form id="topup-form" method="POST" class="form-section">
             <!-- Input nomor telepon -->
             <div class="card">
-                <h3>📱 Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="Masukkan No. Telepon" required>
+                <h3>📱 Masukkan User ID</h3>
+                <div class="input-form">
+                <input type="text"  name="uid" placeholder="User ID" required>
+            </div>
+            <p style="font-size:14px">Masukkan User ID</p>
             </div>
 
             <!-- Pilihan item -->
             <div class="card">
-                <h3>💎 Pilih Item</h3>
+                <h3>💰 Pilih Nominal Top Up</h3>
                 <div class="item-grid">
                     <?php
                     // Pilihan item
                     $items = [
-                        ['value' => '5rb', 'price' => 5000],
-                        ['value' => '10rb', 'price' => 10000],
-                        ['value' => '20rb', 'price' => 20000],
-                        ['value' => '30rb', 'price' => 30000],
-                        ['value' => '50rb', 'price' => 50000],
-                        ['value' => '100rb', 'price' => 100000],
-                        ['value' => '700rb', 'price' => 720000],
+                        ['value' => '30 Uc', 'price' => 7500],
+                        ['value' => '60 Uc', 'price' => 14000],
                     ];
 
                     // Loop untuk menampilkan item
@@ -132,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <select name="payment_method" required>
                     <option value="QRIS">QRIS</option>
                     <option value="All E-Wallet">All E-Wallet</option>
-                    <option value=""></option>
+                    <option value="BCA">BCA</option>
                 </select>
                 <p>Total Harga: <span id="total-price">Rp 0</span></p>
             </div>

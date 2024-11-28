@@ -27,8 +27,8 @@
              header("location:../index.php");
         }
         else{
-            $login_msg = "Akun Tidak Ditemukan.";
-            echo '<script>alert("Akun Tidak Ditemukan")</script>';
+            $login_msg = "Akun/Password Salah.";
+            echo '<script>alert("Akun Atau Password Salah")</script>';
         $conn ->close();
 }
     }

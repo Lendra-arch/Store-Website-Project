@@ -99,6 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text"  name="uid" placeholder="User ID" required>
                 <input type="text"  name="sid" placeholder="Server ID" required>
                 </div>
+            <p style="font-size:14px">Masukkan User ID & Server ID</p>
             </div>
 
             <!-- Pilihan item -->

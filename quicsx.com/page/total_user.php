@@ -74,7 +74,7 @@ $result_users = $conn->query($sql_users);
 </head>
 <body>
     <?php include "../layout/navbar.php"; ?>
-    <div class="container">
+    <div class="kotak">
         <h1>Daftar Pengguna</h1>
         <form method="POST">
             <table>

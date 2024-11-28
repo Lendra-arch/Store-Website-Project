@@ -80,7 +80,7 @@
                         <div class="step-number">4</div>
                         <span>Pembayaran</span>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=6282184591229&text=Min mau tanya boleh?
+                    <a href="https://api.whatsapp.com/send?phone=6285745735072&text=Min mau tanya boleh?
                     " class="btn" style="margin-top: 1.5rem;">Mulai Sekarang</a>
                 </div>
             </div>
