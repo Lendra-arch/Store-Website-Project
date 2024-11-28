@@ -30,28 +30,74 @@
     <section class="services">
         <div class="container">
             <h2><span style="color: #1456b3;">Layanan</span> Yang<br>Kami Sediakan!</h2>
-            <div class="services-grid">
-                <a class="service-card">
-                    <div class="service-icon">💵</div>
-                    <h3>Convert Mata Uang</h3>
-                </a>
-                <a href="/quicsx.com/page/produk.php"class="service-card">
-                    <div class="service-icon">💳🎮</div>
-                    <h3>Top Up E-Wallet & Games</h3>
-                </a>
-                <a class="service-card">
-                    <div class="service-icon">🎥</div>
-                    <h3>Jasa Edit Video</h3>
-                </a>
-                <a class="service-card">
-                    <div class="service-icon">📷</div>
-                    <h3>Jasa Edit Foto</h3>
-                </a>
-                <a class="service-card">
-                    <div class="service-icon">📄</div>
-                    <h3>Jasa Edit/Buat Dokumen</h3>
-                </a>
-            </div>
+            <a class="card">
+                <div class="card-content">
+                <h2>Top Up E-Wallet</h2>
+                <p>Mendukung E-Wallet Berikut</p>
+                <div class="group-icon">
+                    <img src="images/icon-dana.png" class="icon">
+                    <img src="images/icon-gopay.png" class="icon">
+                    <img src="images/icon-ovo.png" class="icon">
+                    <img src="images/icon-spay.png" class="icon">
+                    <img src="images/icon-linkaja.jpg" class="icon">
+                </div>
+                </div>
+                <div class="card-image"><img src="images/e-wallet.jpg" width="100%"></div>
+            </a>
+
+            <a class="card">
+                <div class="card-content">
+                <h2>Top Up Games</h2>
+                <p>Games yang ada disini</p>
+                <div class="group-icon">
+                    <img src="images/icon-codm.png" class="icon">
+                    <img src="images/icon-ff.png" class="icon">
+                    <img src="images/icon-pubg.png" class="icon">
+                    <img src="images/icon-genshin.png" class="icon">
+                    <img src="images/icon-roblox.jpg" class="icon">
+                    <img src="images/icon-ml.png" class="icon">
+                </div>
+                </div>
+                <div class="card-image"><img src="images/games.png" width="100%"></div>
+            </a>
+
+             <a class="card">
+                <div class="card-content">
+                <h2>Convert Uang</h2>
+                <p>Mata uang yang ada didukung</p>
+                <p style="font-weight:bold;">RUPIAH       RINGGIT</p>
+                </div>
+                <div class="card-image"><img src="images/money.png" width="100%"></div>
+            </a>
+
+            <a class="card">
+                <div class="card-content">
+                <h2>Edit Video</h2>
+                <p>Meliputi</p>
+                <p style="font-weight:bold;">EDIT JJ, EDIT TYPOGRAPHY, CUT VIDEO,</p>
+                </div>
+                <div class="card-image"><img src="images/video.jpg" width="100%"></div>
+            </a>
+
+            <a class="card">
+                <div class="card-content">
+                <h2>Edit FOTO</h2>
+                <p>Meliputi</p>
+                <p style="font-weight:bold;">BUAT POSTER, BUAT INFOGRAFIS</p>
+                </div>
+                <div class="card-image"><img src="images/foto.jpg" width="100%"></div>
+            </a>
+
+            <a class="card">
+                <div class="card-content">
+                <h2>Edit atau Buat Dokumen</h2>
+                <p>Buat apa aja kak?</p>
+                <p style="font-weight:bold;">BUAT LAPORAN,BUAT PPT, SEMUA YANG BERKAITAN DOKUMEN</p>
+                <p>FORMAT FILE YANG DIDUKUNG</p>
+                <p style="font-weight:bold;">DOCX, EXCEL, PPT</p>
+                </div>
+                <div class="card-image"><img src="images/dokumen.jpg" width="100%"></div>
+            </a>
             <a href="/quicsx.com/page/layanan.php" class="btn" style="float: right;">Pergi ke Layanan >></a>
         </div>
     </section>

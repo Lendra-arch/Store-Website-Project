@@ -195,30 +195,78 @@ body {
     margin-bottom: 2rem;
     color: #1a365d;
 }
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-.service-card {
-    background-color: white;
-    text-decoration: none;
-    color: #333;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: default;
-}
-.service-card:hover {
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    height: 200px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    position: relative;
+    transition: transform 0.3s ease, outline 0.3s ease;
+  }
+.card:hover {
     transform: translateY(-5px);
+    outline: 2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
-.service-icon {
-    font-size: 2rem;
-    color: #1a365d;
-    margin-bottom: 1rem;
+
+
+  /* Content area */
+  .card-content {
+    flex: 1;
+    padding: 20px;
+    z-index: 1;
+    justify-items: left;
+  }
+
+  /* Text styling */
+  .card-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    margin: 0;
+    color: #555;
+  }
+.group-icon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    overflow: hidden;
 }
+.group-icon img {
+    width: 20%;
+    max-width: 80px;
+
+  }
+  /* Image area */
+  .card-image {
+    flex: 1;
+    background-image: url('https://via.placeholder.com/300'); /* Ganti dengan URL gambar Anda */
+    background-size: cover;
+    background-position: center right;
+    position: relative;
+  }
+
+  /* Fade effect */
+  .card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Luas fade */
+    height: 100%;
+    background: linear-gradient(to right, rgba(244, 244, 244, 1), rgba(244, 244, 244, 0));
+    z-index: 2;
+  }
 
 /* Solution Steps Section */
 .solution {
