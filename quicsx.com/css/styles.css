@@ -128,6 +128,7 @@ body {
     padding: 4rem 0;
 }
 .hero-content {
+    /* background-image: url('../images/convert.jpg'); */
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -187,6 +188,7 @@ body {
 
 /* Services Section */
 .services {
+    background: linear-gradient(180deg, #eaeaea, transparent);
     padding: 4rem 0;
 }
 .services h2 {
@@ -195,7 +197,8 @@ body {
     margin-bottom: 2rem;
     color: #1a365d;
 }
-.card {
+.card-services {
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -210,7 +213,7 @@ body {
     position: relative;
     transition: transform 0.3s ease, outline 0.3s ease;
   }
-.card:hover {
+.card-services:hover {
     transform: translateY(-5px);
     outline: 2px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -218,7 +221,7 @@ body {
 
 
   /* Content area */
-  .card-content {
+  .card-services-content {
     flex: 1;
     padding: 20px;
     z-index: 1;
@@ -226,12 +229,12 @@ body {
   }
 
   /* Text styling */
-  .card-content h2 {
+  .card-services-content h2 {
     margin: 0 0 10px;
     font-size: 1.5rem;
   }
 
-  .card-content p {
+  .card-services-content p {
     margin: 0;
     color: #555;
   }
@@ -248,7 +251,7 @@ body {
 
   }
   /* Image area */
-  .card-image {
+  .card-services-image {
     flex: 1;
     background-image: url('https://via.placeholder.com/300'); /* Ganti dengan URL gambar Anda */
     background-size: cover;
@@ -257,7 +260,7 @@ body {
   }
 
   /* Fade effect */
-  .card-image::before {
+  .card-services-image::before {
     content: '';
     position: absolute;
     top: 0;
@@ -271,7 +274,7 @@ body {
 /* Solution Steps Section */
 .solution {
     background-color: #e6f0ff;
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
 }
 .solution-content {
     display: flex;

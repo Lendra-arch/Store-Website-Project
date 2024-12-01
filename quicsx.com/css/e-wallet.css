@@ -104,3 +104,17 @@ button:hover {
     font-weight: bold;
     color: #0095ff;
 }
+
+.hidden {
+    display: none;
+}
+
+.sub-item {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.item-option.selected .sub-item {
+    display: block; /* Tampilkan sub-item hanya jika item dipilih */
+}

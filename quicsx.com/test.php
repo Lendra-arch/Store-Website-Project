@@ -1,88 +1,73 @@
-<?php
-session_start();
-
-include "service/database.php";
-// Simulasi login (dalam aplikasi nyata, ini akan menjadi sistem login yang sebenarnya)
-if (!isset($_SESSION['id'])) {
-    $_SESSION['id'] = 1; // Anggap user dengan ID 1 yang sedang login
-}
-
-// Data item e-wallet
-$items = array(
-    array("nama" => "GoPay 10K", "harga" => 11000),
-    array("nama" => "GoPay 20K", "harga" => 21000),
-    array("nama" => "OVO 25K", "harga" => 26000),
-    array("nama" => "OVO 50K", "harga" => 51000),
-    array("nama" => "DANA 20K", "harga" => 21000),
-    array("nama" => "DANA 50K", "harga" => 51000),
-    array("nama" => "LinkAja 20K", "harga" => 21000),
-    array("nama" => "LinkAja 50K", "harga" => 51000)
-);
-
-// Proses checkout
-if (isset($_POST['checkout'])) {
-    $user_id = $_SESSION['id'];
-    $item = $_POST['item'];
-    $harga = $_POST['harga'];
-    
-    $sql = "INSERT INTO pesanan (user_id, item, harga, tanggal_pesanan) VALUES ('$user_id', '$item', $harga, NOW())";
-    
-    if (mysqli_query($conn, $sql)) {
-        echo "<p>Pesanan berhasil dibuat!</p>";
-    } else {
-        echo "<p>Error: " . $sql . "<br>" . mysqli_error($conn) . "</p>";
-    }
-}
-?>
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>E-Wallet Top Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section with Background and Foreground Image</title>
+    <style>
+        /* CSS */
+
+        /* Styling Hero Section */
+        .hero {
+            position: relative; /* Menjadikan parent elemen untuk posisi absolute */
+            background-image: url('images/ml.jpg'); /* Ganti dengan gambar background Anda */
+            background-size: cover; /* Agar gambar memenuhi seluruh area */
+            background-position: center; /* Posisi gambar di tengah */
+            height: 400px; /* Tinggi hero section */
+            display: flex; /* Untuk memposisikan konten di tengah */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white; /* Warna teks */
+            overflow: hidden; /* Konten tetap di dalam area */
+        }
+
+        /* Styling untuk konten teks */
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5); /* Overlay gelap transparan agar teks lebih terlihat */
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1; /* Pastikan berada di depan background */
+        }
+
+        /* Styling gambar foreground */
+        .hero-image {
+            position: absolute; /* Posisi bebas di dalam hero */
+            bottom: 0; /* Selalu di bawah */
+            left: 0; /* Selalu di kiri */
+            width: 150px; /* Ukuran gambar */
+            z-index: 2; /* Berada di depan background */
+            transform: translate(-10%, 10%); /* Menggeser posisi gambar */
+        }
+
+        /* Styling tombol */
+        .btn {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn.secondary {
+            background-color: #004d40;
+        }
+    </style>
 </head>
 <body>
-    <h1>E-Wallet Top Up</h1>
-    
-    <form method="post" action="">
-        <h2>Pilih Item:</h2>
-        <select name="item" onchange="updateHarga(this.value)">
-            <?php
-            foreach ($items as $item) {
-                echo "<option value='" . $item['nama'] . "' data-harga='" . $item['harga'] . "'>" . $item['nama'] . " - Rp " . number_format($item['harga']) . "</option>";
-            }
-            ?>
-        </select>
-        
-        <br><br>
-        <input type="hidden" name="harga" id="harga" value="<?php echo $items[0]['harga']; ?>">
-        <input type="submit" name="checkout" value="Checkout">
-    </form>
-
-    <script>
-    function updateHarga(item) {
-        var select = document.querySelector('select[name="item"]');
-        var option = select.options[select.selectedIndex];
-        document.getElementById('harga').value = option.getAttribute('data-harga');
-    }
-    </script>
-
-    <?php
-    // Menampilkan riwayat pesanan
-    $user_id = $_SESSION['id'];
-    $sql = "SELECT * FROM pesanan WHERE user_id = $user_id ORDER BY tanggal_pesanan DESC LIMIT 5";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        echo "<h2>Riwayat Pesanan Terakhir:</h2>";
-        echo "<ul>";
-        while($row = mysqli_fetch_assoc($result)) {
-            echo "<li>" . $row["item"] . " - Rp " . number_format($row["harga"]) . " - " . $row["tanggal_pesanan"] . "</li>";
-        }
-        echo "</ul>";
-    }
-
-    mysqli_close($conn);
-    ?>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Konten teks -->
+        <div class="hero-content">
+            <h1>Say hello to your new favorite drinking buddy</h1>
+            <p>...and goodbye to rough mornings</p>
+            <a href="#" class="btn">Shop Morning Recovery</a>
+            <a href="#" class="btn secondary">Subscribe & Save</a>
+        </div>
+        <!-- Gambar foreground -->
+        <img src="images/banner.jpg" alt="Bottle" class="hero-image">
+    </section>
 </body>
 </html>

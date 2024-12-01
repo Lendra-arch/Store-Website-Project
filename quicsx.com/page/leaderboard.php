@@ -57,7 +57,7 @@ $result = $conn->query($sql);
                               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='3'>Belum ada transaksi.</td></tr>";
+                    echo "<tr><td colspan='3'>Belum ada data.</td></tr>";
                 }
                 ?>
             </tbody>

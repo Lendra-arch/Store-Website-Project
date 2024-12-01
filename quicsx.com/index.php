@@ -30,8 +30,8 @@
     <section class="services">
         <div class="container">
             <h2><span style="color: #1456b3;">Layanan</span> Yang<br>Kami Sediakan!</h2>
-            <a class="card">
-                <div class="card-content">
+            <a class="card-services" href="page/produk-wallet.php">
+                <div class="card-services-content">
                 <h2>Top Up E-Wallet</h2>
                 <p>Mendukung E-Wallet Berikut</p>
                 <div class="group-icon">
@@ -42,11 +42,11 @@
                     <img src="images/icon-linkaja.jpg" class="icon">
                 </div>
                 </div>
-                <div class="card-image"><img src="images/e-wallet.jpg" width="100%"></div>
+                <div class="card-services-image"><img src="images/e-wallet.jpg" width="100%"></div>
             </a>
 
-            <a class="card">
-                <div class="card-content">
+            <!-- <a class="card-services">
+                <div class="card-services-content">
                 <h2>Top Up Games</h2>
                 <p>Games yang ada disini</p>
                 <div class="group-icon">
@@ -58,45 +58,45 @@
                     <img src="images/icon-ml.png" class="icon">
                 </div>
                 </div>
-                <div class="card-image"><img src="images/games.png" width="100%"></div>
-            </a>
+                <div class="card-services-image"><img src="images/games.png" width="100%"></div>
+            </a> -->
 
-             <a class="card">
-                <div class="card-content">
+             <a class="card-services" href="/quicsx.com/produk/convert.php">
+                <div class="card-services-content">
                 <h2>Convert Uang</h2>
                 <p>Mata uang yang ada didukung</p>
                 <p style="font-weight:bold;">RUPIAH       RINGGIT</p>
                 </div>
-                <div class="card-image"><img src="images/money.png" width="100%"></div>
+                <div class="card-services-image"><img src="images/money.png" width="100%"></div>
             </a>
 
-            <a class="card">
-                <div class="card-content">
+            <a class="card-services" href="/quicsx.com/produk/edit-video.php">
+                <div class="card-services-content">
                 <h2>Edit Video</h2>
                 <p>Meliputi</p>
                 <p style="font-weight:bold;">EDIT JJ, EDIT TYPOGRAPHY, CUT VIDEO,</p>
                 </div>
-                <div class="card-image"><img src="images/video.jpg" width="100%"></div>
+                <div class="card-services-image"><img src="images/video.jpg" width="100%"></div>
             </a>
 
-            <a class="card">
-                <div class="card-content">
+            <a class="card-services" href="/quicsx.com/produk/edit-foto.php">
+                <div class="card-services-content">
                 <h2>Edit FOTO</h2>
                 <p>Meliputi</p>
                 <p style="font-weight:bold;">BUAT POSTER, BUAT INFOGRAFIS</p>
                 </div>
-                <div class="card-image"><img src="images/foto.jpg" width="100%"></div>
+                <div class="card-services-image"><img src="images/foto.jpg" width="100%"></div>
             </a>
 
-            <a class="card">
-                <div class="card-content">
+            <a class="card-services" href="/quicsx.com/produk/edit-dokumen.php">
+                <div class="card-services-content">
                 <h2>Edit atau Buat Dokumen</h2>
                 <p>Buat apa aja kak?</p>
                 <p style="font-weight:bold;">BUAT LAPORAN,BUAT PPT, SEMUA YANG BERKAITAN DOKUMEN</p>
                 <p>FORMAT FILE YANG DIDUKUNG</p>
                 <p style="font-weight:bold;">DOCX, EXCEL, PPT</p>
                 </div>
-                <div class="card-image"><img src="images/dokumen.jpg" width="100%"></div>
+                <div class="card-services-image"><img src="images/dokumen.jpg" width="100%"></div>
             </a>
             <a href="/quicsx.com/page/layanan.php" class="btn" style="float: right;">Pergi ke Layanan >></a>
         </div>
@@ -106,9 +106,9 @@
         <div class="container">
             <div class="solution-content">
                 <div class="solution-image">
-                    <img src="resources/cus.png" alt="Customer service illustration">
+                    <img src="resources/cus.png" alt="Customer service illustration" style="margin: 0 0 -8px 0; z-index: -2;">
                 </div>
-                <div class="solution-steps">
+                <div class="solution-steps" style="margin: 0 0 2rem 0;">
                     <h2>Solusi Simpel!</h2>
                     <div class="step-item">
                         <div class="step-number">1</div>
