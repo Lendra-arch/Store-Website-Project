@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php 
                     $kategoriBasic = [
                         ['value' => 'Pemotongan, Penggabungan Klip', 'price' => 5000],
-                        ['value' => 'Add Text/Title', 'price' => 10000],
+                        ['value' => 'Add Text/Title/Overlay', 'price' => 10000],
                         ['value' => 'Add Background Music', 'price' => 20000],
                         ['value' => 'Efek Transisi', 'price' => 20000],
                     ];

@@ -83,8 +83,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Top Up Saldo Hanya Dalam Hitungan Detik<br>
                 1. Cukup Masukan Nomor Telepon Anda.<br>
                 2. Pilih Nominal Yang Anda inginkan.<br>
-                3. Pilih Pembayaran Yang Anda Gunakan Dan Selesaikan Pembayaran.<br>
-                4. Dan Saldo Akan Secara Langsung Ditambahkan Ke Dompet Digital Anda.</p>
+                3. Pilih Pembayaran Yang Anda Gunakan.<br>
+                4. Anda Akan Diarahkan Ke Whatsapp Admin.<br>5. Selesaikan Pembayaran.<br>6. Dan Transaksi Akan Langsung Diproses</p>
         </div>
 
         <!-- Form -->

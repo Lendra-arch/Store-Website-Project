@@ -22,7 +22,7 @@
     <section class="section">
         <div class="section-grid">
             <div>
-                <h2>Cepat Cepat Aman</h2>
+                <h2>Cepat Dan Aman</h2>
                 <p>QuicsX adalah toko digital yang berdedikasi untuk memberikan layanan terbaik dalam berbagai aspek kebutuhan digital Anda. Berdiri di tahun 2024</p>
             </div>
             <div>

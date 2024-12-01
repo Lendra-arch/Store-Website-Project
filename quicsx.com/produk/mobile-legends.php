@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Top Up Diamond MLBB Hanya Dalam Hitungan Detik<br>
                 1. Cukup Masukan User ID & Server Anda.<br>
                 2. Pilih Nominal Yang Anda inginkan.<br>
-                3. Pilih Pembayaran Yang Anda Gunakan Dan Selesaikan Pembayaran.<br>
+                3. Pilih Pembayaran Yang Anda Gunakan.<br>
                 4. Dan Item Akan Secara Langsung Ditambahkan Ke Akun Anda.</p>
         </div>
 

@@ -33,7 +33,7 @@
                 <h3>Hubungi Kami</h3>
                 <ul>
                 <li><a>Email: quicsx@outlook.com</a></li>
-                <li><a href="wa.me/+6285745735072">Whatsapp: +62 857 4573 5072</a></li>
+                <li><a href="https://wa.me/+6285745735072">Whatsapp: +62 857 4573 5072</a></li>
                 <li><a href="https://t.me/QuicsX">Telegram Kami : @QuicsX</a></li>
                 </ul>
                 <!-- <div class="social-icons">

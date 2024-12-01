@@ -98,8 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php 
                     $kategoriDokumen = [
                         ['value' => 'Makalah', 'price' => 3000],
-                        ['value' => 'Skripsi', 'price' => 5000],
-                        ['value' => 'Perbaikan Warna', 'price' => 10000],
+                        ['value' => 'Laporan', 'price' => 5000],
                     ];
                     foreach ($kategoriDokumen as $category) { ?>
                         <div class="item-option" onclick="selectBasic(this, '<?= $category['value'] ?>', <?= $category['price'] ?>)">
@@ -161,7 +160,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php 
                     $outputFormats = [
                         ['value' => 'DOCX', 'price' => 0],
-                        ['value' => 'PNG', 'price' => 0],
                         ['value' => 'PDF', 'price' => 500],
                     ];
                     foreach ($outputFormats as $format) { ?>

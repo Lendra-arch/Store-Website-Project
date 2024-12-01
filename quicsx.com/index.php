@@ -17,7 +17,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Buat Hidupmu<br>Jadi Lebih Mudah!</h1>
-                    <p>QuicsX hadir untuk membantu kegiatan digital dengan cepat dan nyaman setiap saat.</p>
+                    <p>QuicsX hadir untuk membantu Anda. Dengan harga yang Murah namun Pelayanan Kualitas Bintang<br>⭐x5</p>
                     <a href="page/About.php" class="btn">Learn More</a>
                 </div>
                 <div class="hero-image">
@@ -65,7 +65,7 @@
                 <div class="card-services-content">
                 <h2>Convert Uang</h2>
                 <p>Mata uang yang ada didukung</p>
-                <p style="font-weight:bold;">RUPIAH       RINGGIT</p>
+                <p style="font-weight:bold;">RUPIAH & RINGGIT</p>
                 </div>
                 <div class="card-services-image"><img src="images/money.png" width="100%"></div>
             </a>
@@ -74,16 +74,16 @@
                 <div class="card-services-content">
                 <h2>Edit Video</h2>
                 <p>Meliputi</p>
-                <p style="font-weight:bold;">EDIT JJ, EDIT TYPOGRAPHY, CUT VIDEO,</p>
+                <p style="font-weight:bold;">Subtitle, Cut video, Color Grading, Dll.</p>
                 </div>
                 <div class="card-services-image"><img src="images/video.jpg" width="100%"></div>
             </a>
 
             <a class="card-services" href="/quicsx.com/produk/edit-foto.php">
                 <div class="card-services-content">
-                <h2>Edit FOTO</h2>
+                <h2>Edit Foto</h2>
                 <p>Meliputi</p>
-                <p style="font-weight:bold;">BUAT POSTER, BUAT INFOGRAFIS</p>
+                <p style="font-weight:bold;">Hapus Object, Hapus Background, Perbaikan Warna, Dll.</p>
                 </div>
                 <div class="card-services-image"><img src="images/foto.jpg" width="100%"></div>
             </a>
@@ -91,10 +91,8 @@
             <a class="card-services" href="/quicsx.com/produk/edit-dokumen.php">
                 <div class="card-services-content">
                 <h2>Edit atau Buat Dokumen</h2>
-                <p>Buat apa aja kak?</p>
-                <p style="font-weight:bold;">BUAT LAPORAN,BUAT PPT, SEMUA YANG BERKAITAN DOKUMEN</p>
-                <p>FORMAT FILE YANG DIDUKUNG</p>
-                <p style="font-weight:bold;">DOCX, EXCEL, PPT</p>
+                <p>Meliputi</p>
+                <p style="font-weight:bold;">Bikin Makalah, Perbaikan Struktur, Penataan Layout, Dll.</p>
                 </div>
                 <div class="card-services-image"><img src="images/dokumen.jpg" width="100%"></div>
             </a>
