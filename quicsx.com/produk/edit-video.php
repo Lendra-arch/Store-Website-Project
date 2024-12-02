@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form id="edit-photo-form" method="POST" class="form-section">
             <div class="card">
                 <h3>Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="081xxx" required>
+                <input type="number" name="phone" placeholder="081xxx" required>
             </div>
 
             <!-- Kategori Basic -->

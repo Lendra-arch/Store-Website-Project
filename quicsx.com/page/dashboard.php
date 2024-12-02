@@ -161,7 +161,7 @@ $recent_orders_result = $conn->query($sql_recent_orders);
             <h2>Menu Cepat</h2>
             <a href="total_pesanan.php" class="action-link">Lihat Semua Pesanan</a>
             <a href="total_user.php" class="action-link">Lihat Semua Pengguna</a>
-            <a href="total_pembayaran.php" class="action-link">Lihat Semua Pembayaran</a>
+            <!-- <a href="total_pembayaran.php" class="action-link">Lihat Semua Pembayaran</a> -->
         </div>
 
         <!-- Pengguna Terbaru -->

@@ -1,3 +1,72 @@
+<?php
+session_start();
+include "../service/database.php";
+
+// Jika User sudah login, ambil user id nya
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_SESSION['user_id'])) {
+        $_SESSION['pesan'] = 'Login dulu sebelum melanjutkan';
+        header("Location: ../page/login.php");
+        exit;
+    } else {
+        // Ambil data dari form
+        $phone = $_POST['phone'];
+        $note = isset($_POST['note']) && trim($_POST['note']) !== "" ? $_POST['note'] : "Tidak Ada.";
+        $payment_method = $_POST['payment_method'];
+        $convert_category = $_POST['convert_category'];
+        $amount = (float) $_POST['amount'];
+        $category_price = (float) $_POST['convert_price'];
+        $conversion_rate = 3500; // Kurs konversi Ringgit ke Rupiah
+
+        // Hitung total harga berdasarkan kategori
+        if ($convert_category === "Rupiah ke Ringgit") {
+            $received_amount = $amount / $conversion_rate; // Konversi ke Ringgit
+            $total_price = $amount + $category_price; // Total harga dalam Rupiah
+            $currency = "Rp";
+        } elseif ($convert_category === "Ringgit ke Rupiah") {
+            $received_amount = $amount * $conversion_rate; // Konversi ke Rupiah
+            $total_price = $amount + ($category_price / $conversion_rate); // Total harga dalam Ringgit
+            $currency = "RM";
+        } else {
+            echo "<script>alert('Kategori tidak valid!');</script>";
+            exit;
+        }
+
+        // Informasi pesanan
+        $item = $convert_category;
+        $info = "Nomor Telepon: $phone\nNominal: $amount\nTotal Diterima: $received_amount\nCatatan: $note";
+
+        // Query untuk memasukkan data ke tabel pesanan
+        $sql = "INSERT INTO pesanan (user_id, item, harga, informasi, pembayaran, tanggal_pesanan) 
+                VALUES (?, ?, ?, ?, ?, NOW())";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("isiss", $user_id, $item, $total_price, $info, $payment_method);
+
+        if ($stmt->execute()) {
+            // Persiapkan pesan WhatsApp
+            $message = "Halo, saya ingin melakukan konversi:\n\n" .
+                "- No. Telepon: $phone\n" .
+                "- Kategori: $convert_category\n" .
+                "- Nominal: $amount\n" .
+                "- Total Diterima: $received_amount\n" .
+                "- Total Harga: $currency " . number_format($total_price, 2, ',', '.') . "\n" .
+                "- Metode Pembayaran: $payment_method\n" .
+                "- Catatan: $note\n\nTerima kasih!";
+            $encoded_message = urlencode($message);
+            $whatsapp_url = "https://wa.me/6285745735072?text=$encoded_message";
+            echo "<script>window.location.href = '$whatsapp_url';</script>";
+        } else {
+            echo "<script>alert('Error: " . $stmt->error . "');</script>";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -30,10 +99,10 @@
         </div>
 
         <!-- Form -->
-        <form id="convert-form" method="POST" class="form-section">
+        <form id="convert-form" method="POST" action="convert.php" class="form-section">
             <div class="card">
                 <h3>Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="081xxx" required>
+                <input type="number" name="phone" placeholder="081xxx" required>
             </div>
 
             <!-- Kategori Convert -->
@@ -88,7 +157,7 @@
     </div>
     <script>
 let categoryPrice = 0;
-const conversionRate = 3500; // Kurs Ringgit ke Rupiah
+const conversionRate = 3564; // Kurs Ringgit ke Rupiah
 let selectedCategory = "";
 
 function selectCategory(element, categoryName, price) {
@@ -110,21 +179,27 @@ function updateConvertedAmount() {
     let receivedAmount = 0;
     let receivedCurrency = "";
     let totalPrice = 0;
+    let totalCurrency = "";
 
     if (selectedCategory === "Rupiah ke Ringgit") {
-        receivedAmount = amount / conversionRate; // Rupiah ke Ringgit
-        receivedCurrency = "RM";
-        totalPrice = (receivedAmount * conversionRate) + categoryPrice;
-        document.getElementById('total-price').textContent = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+        // Rupiah ke Ringgit
+        receivedAmount = amount / conversionRate; // Konversi ke Ringgit
+        receivedCurrency = "RM"; // Mata uang hasil konversi
+        totalPrice = amount + categoryPrice; // Total harga dalam Rupiah
+        totalCurrency = "Rp"; // Satuan total harga
     } else if (selectedCategory === "Ringgit ke Rupiah") {
-        receivedAmount = amount * conversionRate; // Ringgit ke Rupiah
-        receivedCurrency = "Rp";
-        totalPrice = (receivedAmount) + (categoryPrice / conversionRate);
-        document.getElementById('total-price').textContent = `RM ${totalPrice.toLocaleString('id-ID')}`;
+        // Ringgit ke Rupiah
+        receivedAmount = amount * conversionRate; // Konversi ke Rupiah
+        receivedCurrency = "Rp"; // Mata uang hasil konversi
+        totalPrice = amount + (categoryPrice / conversionRate); // Total harga dalam Ringgit
+        totalCurrency = "RM"; // Satuan total harga
     }
 
+    // Update tampilan
     document.getElementById('received-amount').textContent = `${receivedCurrency} ${receivedAmount.toLocaleString('id-ID')}`;
+    document.getElementById('total-price').textContent = `${totalCurrency} ${totalPrice.toLocaleString('id-ID')}`;
 }
+
     </script>
     <?php include "../layout/footer.php" ?>
 </body>

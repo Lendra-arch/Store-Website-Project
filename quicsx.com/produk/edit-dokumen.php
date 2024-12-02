@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="icon-info card">
             <div style="display: flex; align-items: center; gap: 10px;">
                 <img src="../images/edit-Dokumen.jpg" alt="edit photo" class="icon-logo">
-                <h2>Jasa Edit Dokumen</h2>
+                <h2>Jasa Buat & Edit Dokumen</h2>
             </div>
             <div class="separator"></div>
             <p>Pesan Jasa Edit Dokumen Dengan Harga Affordable.<br>
@@ -88,12 +88,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form id="edit-photo-form" method="POST" class="form-section">
             <div class="card">
                 <h3>Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="081xxx" required>
+                <input type="number" name="phone" placeholder="081xxx" required>
             </div>
 
             <!-- Kategori Basic -->
             <div class="card basic">
-                <h3>Kategori Dokumen</h3>
+                <h3>Buat Dokumen</h3>
                 <div class="item-grid">
                     <?php 
                     $kategoriDokumen = [

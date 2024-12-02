@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Input nomor telepon -->
             <div class="card">
                 <h3>📱 Masukkan No. Telepon</h3>
-                <input type="text" name="phone" placeholder="Masukkan No. Telepon" required>
+                <input type="number" name="phone" placeholder="Masukkan No. Telepon" required>
             </div>
 
             <!-- Pilihan item -->
