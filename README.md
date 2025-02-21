@@ -17,7 +17,3 @@ QuicsX hadir untuk memberikan solusi digital terlengkap untuk berbagai kebutuhan
 - **[Lendra](https://github.com/Lendra-arch/Situs-Website-Project)**
 - **[Andy](https://github.com/Jiichiro/web-promosi)**
 - **[Devid](https://youtu.be/dQw4w9WgXcQ?si=F_GkBdpsvLOC0yX0)**
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
