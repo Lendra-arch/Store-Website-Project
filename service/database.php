@@ -1,8 +1,8 @@
 <?php 
-$servername = "sql100.infinityfree.com";
-$username = "if0_37832045";
-$password = "LUutkWibqJZW";
-$dbname = "if0_37832045_web";
+$servername = "localhost";
+$username = "root";
+$password = "cihuy";
+$dbname = "db_quicsx_webstore";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
